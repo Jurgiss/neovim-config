@@ -121,7 +121,7 @@ local plugins = {
           ["core.dirman"] = { -- Manages Neorg workspaces
             config = {
               workspaces = {
-                notes = "~/Nextcloud2/Documents/notes",
+                notes = "~/Nextcloud/Documents/notes",
               },
               default_workspace = "notes",
             },
