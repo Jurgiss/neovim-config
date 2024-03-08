@@ -34,6 +34,9 @@ M.mason = {
     "eslint-lsp",
     "prettierd",
     "tailwindcss-language-server",
+
+    -- rust
+    "rust-analyzer",
   },
 }
 

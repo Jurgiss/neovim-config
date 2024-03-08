@@ -13,6 +13,29 @@ local plugins = {
     end, -- Override to setup mason-lspconfig
   },
 
+  {
+    "mfussenegger/nvim-dap",
+    event = "VeryLazy"
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end
+  },
+  {
+    "mrcjkb/rustaceanvim",
+    ft = "rust",
+    dependencies = "neovim/nvim-lspconfig",
+    -- opts = function ()
+    --   return require "custom.configs.rustaceanvim"
+    -- end,
+    -- config = function (_, opts)
+    --   require('rustaceanvim').setup(opts)
+    -- end
+  },
+
   -- override plugin configs
   {
     "williamboman/mason.nvim",
@@ -129,28 +152,6 @@ local plugins = {
         },
       }
     end,
-  },
-
-  {
-    "mfussenegger/nvim-dap",
-    event = "VeryLazy",
-    dependencies = {
-      {
-        "rcarriga/nvim-dap-ui",
-        event = "VeryLazy",
-      },
-      {
-        "theHamsta/nvim-dap-virtual-text",
-        event = "VeryLazy",
-      },
-      {
-        "jay-babu/mason-nvim-dap.nvim",
-        dependencies = "mason.nvim",
-      },
-      {
-        "folke/which-key.nvim",
-      },
-    },
   },
   {
     "jackMort/ChatGPT.nvim",
